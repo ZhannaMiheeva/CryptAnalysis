@@ -4,8 +4,17 @@ import model.CryptoModel;
 
 import java.util.Scanner;
 
+import static consts.Consts.ENTER_DESTINATION_FILE;
+import static consts.Consts.ENTER_KEY;
+
 public class ConsoleService {
-    public void enterData(String enterSourceDecryptFile, CryptoModel cryptoModel, Scanner scanner){
+    private final Scanner scanner;
+
+    public ConsoleService(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
+    public void enterData(String enterSourceDecryptFile, CryptoModel cryptoModel, Scanner scanner) {
         System.out.println(enterSourceDecryptFile);
         cryptoModel.setPathFrom(scanner.nextLine());
 
@@ -14,12 +23,5 @@ public class ConsoleService {
         System.out.println(ENTER_KEY);
         cryptoModel.setKey(scanner.nextInt());
 
-
-
-
-
-
-
-
-
     }
+}

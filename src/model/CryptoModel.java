@@ -37,4 +37,5 @@ public class CryptoModel {
     public void setKey(int key) {
         this.key = key;
     }
+
 }
