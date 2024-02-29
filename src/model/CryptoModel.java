@@ -1,6 +1,7 @@
 package model;
 
 public class CryptoModel {
+
     private String pathFrom;
     private String pathTo;
     private int key;
