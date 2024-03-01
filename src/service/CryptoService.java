@@ -54,7 +54,7 @@ public class CryptoService {
         int key = 0;
 
         for ( key = 0; key < ALPHABET.length; key++) {
-            decryptMessage = decrypt();
+            decrypt(model);
 
             charArr = decryptMessage.toCharArray();
 
@@ -69,7 +69,7 @@ public class CryptoService {
             }
             spaceCounter = 0;
         }
-        decryptMessage = fileProcessor.writeFile(model.getPathTo(),keyResult);
+        fileProcessor.writeFile(model.getPathTo(), String.valueOf(keyResult));
         return decryptMessage;
 
     }
